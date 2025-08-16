@@ -14,7 +14,7 @@ export default defineConfig({
 	css: {
 		preprocessorOptions: {
 			scss: {
-				additionalData: `@use "@/shared/styles/tools" as *;`,
+				additionalData: `@use "${path.resolve(__dirname, 'src/shared/styles/tools.scss')}" as *;`,
 			}
 		}
 	}
