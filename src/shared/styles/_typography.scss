@@ -1,0 +1,75 @@
+@use 'mixins' as *;
+
+.text {
+  &-xs { font-size: var(--font-size-xs); }
+  &-sm { font-size: var(--font-size-sm); }
+  &-base { font-size: var(--font-size-base); }
+  &-lg { font-size: var(--font-size-lg); }
+  &-xl { font-size: var(--font-size-xl); }
+  &-2xl { font-size: var(--font-size-2xl); }
+  &-3xl { font-size: var(--font-size-3xl); }
+  &-4xl { font-size: var(--font-size-4xl); }
+  
+  &-light { font-weight: var(--font-weight-light); }
+  &-normal { font-weight: var(--font-weight-normal); }
+  &-medium { font-weight: var(--font-weight-medium); }
+  &-semibold { font-weight: var(--font-weight-semibold); }
+  &-bold { font-weight: var(--font-weight-bold); }
+  
+  &-justify { text-align: justify; }
+  
+  &-primary { color: var(--color-primary); }
+  &-gray-900 { color: var(--color-gray-900); }
+  &-gray-700 { color: var(--color-gray-700); }
+  &-gray-500 { color: var(--color-gray-500); }
+  &-white { color: var(--color-white); }
+}
+
+
+h1, .h1 {
+  @include fluid-text(48, 32);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+  margin: 0 0 var(--spacing-lg) 0;
+}
+
+h2, .h2 {
+  @include fluid-text(36, 24);
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.3;
+  margin: 0 0 var(--spacing-md) 0;
+}
+
+h3, .h3 {
+  @include fluid-text(24, 20);
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.4;
+  margin: 0 0 var(--spacing-sm) 0;
+}
+
+h4, .h4 {
+  @include fluid-text(20, 18);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.4;
+  margin: 0 0 var(--spacing-sm) 0;
+}
+
+h5, .h5 {
+  @include fluid-text(18, 16);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.4;
+  margin: 0 0 var(--spacing-xs) 0;
+}
+
+h6, .h6 {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.4;
+  margin: 0 0 var(--spacing-xs) 0;
+}
+
+
+p {
+  margin: 0 0 var(--spacing-md) 0;
+  line-height: 1.6;
+}

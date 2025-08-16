@@ -1,0 +1,23 @@
+.booked-ticket-qr {
+	display: flex;
+	align-items: center;
+	gap: rem(77);
+	width: 100%;
+	background-color: #fff;
+  padding: rem(32) rem(24);
+	border-radius: rem(10);
+	margin-bottom: rem(32);
+
+	&__buttons {
+		display: flex;
+		flex-direction: column;
+		gap: rem(16);
+		flex: 1;
+	}
+
+	img {
+		width: rem(220);
+		height: rem(220);
+	}
+
+}

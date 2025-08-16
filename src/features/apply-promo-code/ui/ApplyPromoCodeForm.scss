@@ -1,0 +1,45 @@
+.apply-promo-code {
+  background: #FFFFFF;
+  border: 1px solid rgba(1, 4, 0, 0.5);
+  border-radius: var(--radius);
+  padding: rem(32) rem(24);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: rem(16);
+  width: 100%;
+  height: rem(151);
+  box-sizing: border-box;
+
+  &__title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: rem(20);
+    line-height: 1.5;
+    color: #010400;
+    margin: 0;
+  }
+
+  &__input-wrapper {
+    display: flex;
+    align-items: center;
+    padding: rem(8);
+    border-bottom: 1px solid rgba(1, 4, 0, 0.5);
+  }
+
+  &__input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: rem(14);
+    line-height: 1.5;
+    color: #010400;
+    width: 100%;
+
+    &::placeholder {
+      color: rgba(1, 4, 0, 0.5);
+    }
+  }
+}

@@ -1,0 +1,280 @@
+.ticket-search-form {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto auto auto auto;
+	gap: rem(24);
+	width: 100%;
+	align-items: start;
+}
+
+.ticket-search-form__item { 
+	grid-area: 1 / 1 / 2 / 3; 
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: var(--color-white);
+	border-radius: var(--radius);
+	padding: rem(8) rem(24);
+	&-radio {
+		display: flex;
+		align-items: center;
+		gap: rem(8);
+		position: relative;
+		
+		input[type="radio"] {
+			position: absolute;
+			opacity: 0;
+			cursor: pointer;
+			width: rem(20);
+			height: rem(20);
+		}
+		
+		label {
+			color: var(--color-black);
+			font-size: var(--font-size-base);
+			cursor: pointer;
+			display: flex;
+			align-items: center;
+			gap: rem(8);
+			position: relative;
+
+			span {
+				margin-top: rem(1.5);
+			}
+			
+			
+			&::before {
+				content: '';
+				width: rem(20);
+				height: rem(20);
+				border: none;
+				border-radius: 50%;
+				background-color: #C7D1DF;
+				transition: all 0.2s ease;
+				flex-shrink: 0;
+
+			}
+			
+			&::after {
+				content: '';
+				position: absolute;
+				left: rem(6);
+				top: 50%;
+				transform: translateY(-50%);
+				width: rem(8);
+				height: rem(8);
+				border-radius: 50%;
+				background-color: white;
+				opacity: 0;
+				transition: all 0.2s ease;
+			}
+		}
+		
+		input[type="radio"]:checked + label::before {
+			background-color: #6366f1;
+		}
+		
+		input[type="radio"]:checked + label::after {
+			opacity: 1;
+		}
+		
+		input[type="radio"]:hover + label::before {
+			background-color: #8b5cf6;
+		}
+	}
+
+	&-person {
+		display: flex;
+		align-items: center;
+		gap: rem(8);
+		img {
+			width: rem(20);
+			height: rem(20);
+		}
+	}
+}
+
+.ticket-search-form__trip-type {
+	display: flex;
+	gap: rem(147);
+}
+
+.ticket-search-form__button-plus,
+.ticket-search-form__button-minus {
+	width: rem(24);
+	height: rem(24);
+	border: none;
+	background-color: transparent;
+	color: #6366f1;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	font-size: var(--font-size-sm);
+	font-weight: bold;
+	transition: all 0.2s ease;
+	@include hover {
+		background-color: #6366f1;
+		color: white;
+	}
+}
+
+.ticket-search-form__count {
+	color: var(--color-black);
+	font-size: var(--font-size-base);
+	font-weight: 600;
+	min-width: rem(20);
+	text-align: center;
+}
+
+
+.ticket-search-form__departure { 
+	grid-area: 2 / 1 / 3 / 2; 
+	display: flex;
+	flex-direction: column;
+	gap: rem(16);
+	color: var(--color-white);
+	font-size: var(--font-size-lg);
+	font-weight: 600;
+  input, select {
+		background-color: var(--color-white);
+		border-radius: var(--radius);
+		padding: rem(16) rem(24);
+    border: none;
+    outline: none;
+		font-size: var(--font-size-base);
+		color: black;
+		&::placeholder {
+			color: #999;
+		}
+		&:focus {
+			box-shadow: 0 0 2px 3px #6366f1;
+		}
+	}
+}
+
+
+.ticket-search-form__arrival { 
+	grid-area: 2 / 2 / 3 / 3; 
+	display: flex;
+	flex-direction: column;
+	gap: rem(16);
+	color: var(--color-white);
+	font-size: var(--font-size-lg);
+	font-weight: 600;
+  input, select {
+		background-color: var(--color-white);
+		border-radius: var(--radius);
+		padding: rem(16) rem(24);
+		border: none;
+		outline: none;
+		font-size: var(--font-size-base);
+		color: black;
+		&::placeholder {
+			color: #999;
+		}
+		&:focus {
+			box-shadow: 0 0 2px 3px #6366f1;
+		}
+	}
+}
+
+
+.ticket-search-form__depart-day { 
+	grid-area: 3 / 1 / 4 / 2; 
+	display: flex;
+	flex-direction: column;
+	gap: rem(16);
+	color: white;
+	font-size: var(--font-size-lg);
+	font-weight: 600;
+	input {
+		background-color: var(--color-white);
+		border-radius: var(--radius);
+		padding: rem(16) rem(24);
+		padding-left: rem(48); 
+		border: none;
+		outline: 1px solid #9CA3AF;
+		cursor: pointer;
+		font-size: var(--font-size-base);
+		background-image: url('@/shared/icons/calendar-icon.svg');
+		background-repeat: no-repeat;
+		background-position: left rem(25) center;
+		background-size: rem(16) rem(16);
+		color: black;
+		width: 100%;
+		&::placeholder {
+			color: #9CA3AF;
+			font-weight: 400;
+		}
+	}
+}
+.ticket-search-form__return-day { 
+	grid-area: 3 / 2 / 4 / 3; 
+	display: flex;
+	flex-direction: column;
+	gap: rem(16);
+	color: var(--color-white);
+	font-size: var(--font-size-lg);
+	font-weight: 600;
+
+	input {
+		background-color: var(--color-white);
+		border-radius: var(--radius);
+		padding: rem(16) rem(24);
+		border: none;
+		outline: 1px solid #9CA3AF;
+		cursor: pointer;
+		padding-left: rem(48);
+		font-size: var(--font-size-base);
+		background-image: url('@/shared/icons/calendar-icon.svg');
+		background-repeat: no-repeat;
+		background-position: left rem(25) center;
+		background-size: rem(16) rem(16);
+		color: black;
+		width: 100%;
+		&::placeholder {
+			color: #9CA3AF;
+			font-weight: 400;
+		}
+	}
+}
+.button.ticket-search-form__button { 
+	grid-area: 4 / 1 / 5 / 3;
+	font-size: rem(20);
+	font-weight: 600;
+	align-self: center;
+	height: auto;
+}
+
+.dark {
+	.ticket-search-form__departure {
+		color: black;
+		span {
+			color: black;
+		}
+	}
+	.ticket-search-form__arrival {
+		color: black;
+	}
+	.ticket-search-form__depart-day {
+		color: black;
+	}
+	.ticket-search-form__return-day {
+		color: black;
+	}
+}
+
+
+
+select.select-placeholder {
+  color: #9CA3AF; 
+	font-weight: 400;
+}
+
+
+select {
+    color: #000; 
+}
+

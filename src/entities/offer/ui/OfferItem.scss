@@ -1,0 +1,58 @@
+.offer-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: rem(20);
+
+  &__content {
+    display: flex;
+    align-items: center;
+    gap: rem(10);
+    flex: 1;
+  }
+
+  &__icon {
+    width: rem(20);
+    height: rem(20);
+    background-color: #5E4AE3;
+    color: #FFFFFF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: rem(12);
+    flex-shrink: 0;
+  }
+
+  &__description {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: rem(16);
+    line-height: 1.5;
+    color: #010400;
+    max-width: 167px;
+  }
+
+  &__apply {
+    background: transparent;
+    border: none;
+    color: #5E4AE3;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: rem(16);
+    line-height: 1.5;
+    cursor: pointer;
+    padding: 0;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.offer-item__apply.active {
+	color: #FF6060;
+}

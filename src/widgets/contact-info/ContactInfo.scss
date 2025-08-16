@@ -1,0 +1,61 @@
+.contact-info {
+	width: 100%;
+	padding: rem(32) rem(36);
+	background-color: #fff;
+	border-radius: var(--radius);
+	border: rem(1) solid #01040080;
+
+	&__passenger {
+		margin-bottom: rem(32);
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&-title {
+			font-size: rem(20);
+			font-weight: 500;
+			color: #000;
+			margin-bottom: rem(4);
+		}
+		&-subtitle {
+			font-size: rem(14);
+			font-weight: 500;
+			color: #01040080;
+			margin-bottom: rem(16);
+		}
+		&-form {
+			display: flex;
+			flex-wrap: wrap;
+			gap: rem(16);
+			&-item {
+				width: 48%;
+				display: flex;
+				flex-direction: column;
+				gap: rem(4);
+			}
+			&-label {
+				margin-bottom: rem(16);
+			}
+			&-input {
+				height: rem(56);
+				border-radius: var(--radius);
+				border: none;
+				background-color: #F5F5F5;
+				padding: rem(16);
+				font-size: rem(14);
+			}
+		}
+	}
+}
+
+.contact-info__passenger-form-input.input--error {
+	border-color: red;
+  background-color: #fff5f5;
+}
+
+.error-message {
+  color: red;
+  font-size: rem(12);
+  margin-top: rem(4);
+}

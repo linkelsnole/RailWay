@@ -1,0 +1,245 @@
+.ticket-info {
+  background: rgba(94, 74, 227, 0.1);
+  border: 1px solid rgba(1, 4, 0, 0.5);
+  border-radius: 10px;
+  padding: rem(32) rem(24);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+
+	&__meta {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+
+  &__title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: rem(20);
+    line-height: 1.5;
+    color: #010400;
+    margin: 0;
+  }
+
+  &__train {
+    display: flex;
+		justify-content: space-between;
+    gap: rem(20);
+
+    &-name {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      font-size: rem(20);
+      line-height: 1.5;
+      color: #010400;
+      margin: 0;
+    }
+
+    &-class {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      font-size: rem(16);
+      line-height: 1.5;
+      color: #5E4AE3;
+      margin: 0;
+    }
+  }
+
+  &__journey {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: rem(150);
+    margin: rem(16) 0;
+  }
+
+  &__departure,
+  &__arrival {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__departure {
+    align-items: flex-start;
+  }
+
+  &__arrival {
+    align-items: flex-end;
+    text-align: right;
+  }
+
+  &__date {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: rem(16);
+    line-height: 1.5;
+    color: #010400;
+    margin-bottom: rem(8);
+  }
+
+  &__time-location {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  &__time {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: rem(16);
+    line-height: 1.5;
+    color: #010400;
+  }
+
+  &__location {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: rem(16);
+    line-height: 1.5;
+    color: #010400;
+		white-space: nowrap;
+  }
+
+  &__duration {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+
+    &-text {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      font-size: rem(12);
+      line-height: 1.5;
+      color: #90A3BF;
+			white-space: nowrap;
+    }
+  }
+
+  &__traveller,
+  &__contact {
+    display: flex;
+    flex-direction: column;
+    gap: rem(8);
+  }
+
+  &__section-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: rem(20);
+    line-height: 1.5;
+    color: #010400;
+    margin: 0;
+  }
+
+  &__traveller-item {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		white-space: nowrap;
+  }
+
+  &__traveller-name {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: rem(16);
+    line-height: 1.5;
+    color: #010400;
+		display: block;
+  }
+
+  &__traveller-age {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: rem(16);
+    line-height: 1.5;
+    color: #010400;
+		display: block;
+  }
+
+	&__contact {
+		display:flex;
+		justify-content: space-between;
+		flex-direction: row;
+	}
+
+  &__contact-label {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: rem(16);
+    line-height: 1.5;
+    color: #010400;
+    margin: 0;
+  }
+
+  &__email {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: rem(16);
+    line-height: 1.5;
+    color: #010400;
+    margin: 0;
+  }
+
+	&__total {
+		display: flex;
+		justify-content: space-between;
+		align-items: center
+	}
+
+	&__total-amount {
+		font-weight: 600;
+	}
+
+	&__traveller-entry {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+	}
+}
+
+.ticket-info.white {
+	background: white;
+}
+
+
+.ticket-info__booking-details {
+	font-family: Poppins;
+	font-weight: 500;
+	font-style: Medium;
+	font-size: 16px;
+	leading-trim: NONE;
+	line-height: 100%;
+	letter-spacing: 0%;
+	color: #01040080;
+	display: flex;
+	flex-direction: column;
+	gap: rem(5);
+
+}
+
+.baggage {
+	font-family: Poppins;
+	font-weight: 500;
+	font-style: Medium;
+	font-size: 16px;
+	leading-trim: NONE;
+	line-height: 100%;
+	letter-spacing: 0%;
+	color: #01040080;
+}
+
+.dish {
+	font-family: Poppins;
+	font-weight: 500;
+	font-style: Medium;
+	font-size: 16px;
+	leading-trim: NONE;
+	line-height: 100%;
+	letter-spacing: 0%;
+	color: #01040080;
+}

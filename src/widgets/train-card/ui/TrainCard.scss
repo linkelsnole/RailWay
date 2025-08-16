@@ -1,0 +1,55 @@
+.train-card {
+  border: rem(1) solid rgba(0,0,0,0.12);
+  border-radius: rem(12);
+  padding: rem(24);
+	background-color: #fff;
+}
+.train-card {
+	&__header { 
+		font-weight: 600; 
+		margin-bottom: rem(12); 
+	}
+	&__runs-on { 
+	display: flex; 
+	flex-direction: column;
+	align-items: flex-start; 
+	gap: rem(11); 
+	margin-bottom: rem(12); 
+	&-button {
+		font-size: rem(14);
+		font-weight: 500;
+		padding: rem(5) rem(15);
+		border-radius: var(--radius);
+		border: rem(1) solid #5E4AE3;
+
+	}
+	}
+	&_details { 
+		display: grid; 
+		grid-template-columns: 1fr 1fr 1fr; 
+		gap: rem(100); 
+		align-items: center; 
+	}
+	&__departure, &__arrival { 
+	display: grid; 
+	gap: rem(4); 
+	}
+
+	&__arrival {
+		margin-left: auto;
+		text-align: right;
+	}
+	&__duration { 
+		text-align: center; 
+		color: #90A3BF;
+		font-size: rem(12); 
+	}
+	&__station {
+		white-space: nowrap;
+	}
+	&_classes {
+	 margin-top: rem(16); 
+	 display: grid; 
+	 grid-template-columns: repeat(auto-fit, minmax(rem(180), 1fr)); gap: rem(20); 
+	}
+}

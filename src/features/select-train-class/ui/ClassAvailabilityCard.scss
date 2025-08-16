@@ -1,0 +1,40 @@
+.class-card {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: rem(4) rem(16);
+  padding: rem(20);
+  border-radius: rem(12);
+  border: rem(1) solid rgba(0,0,0,0.08);
+	transition: transform 0.2s ease-in-out;
+	@include hover {
+		transform: scale(1.01);
+		box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+	}
+}
+.status-default { 
+	background: #FBD1A2; 
+}
+.status-available { background: #7DCFB6; }
+.status-waitlist { 
+	background: #ee9066; 
+	
+}
+
+.class-card__type { 
+	font-weight: 600; 
+	margin-right: auto;
+}
+.class-card__price { 
+	justify-self: end; 
+	margin-left: auto;
+}
+
+.class-card__status {
+	margin-left: auto;
+}
+
+.class-card__quota {
+		margin-right: auto;
+}
+
+

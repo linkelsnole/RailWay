@@ -1,0 +1,62 @@
+@use 'mixins' as *;
+
+// SCSS переменные (компилируются)
+$radius: rem(10);
+
+$spacing-xs: rem(4);
+$spacing-sm: rem(8);
+$spacing-md: rem(16);
+$spacing-lg: rem(24);
+$spacing-xl: rem(32);
+$spacing-2xl: rem(40);
+
+$font-size-xs: rem(10);
+$font-size-sm: rem(12);
+$font-size-base: rem(14);
+$font-size-lg: rem(16);
+$font-size-xl: rem(20);
+$font-size-2xl: rem(32);
+
+// CSS переменные (runtime)
+:root {
+  // Основные цвета
+  --color-primary: #5E4AE3;
+  --color-primary-dark: #4939B5;
+  --color-primary-light: #705BE3;
+  
+  // Дополнительные цвета
+  --color-white: #ffffff;
+	--color-gray: #91A3C0;
+  
+  // Радиусы
+  --radius: #{$radius};
+
+  // Отступы
+  --spacing-xs: #{$spacing-xs};
+  --spacing-sm: #{$spacing-sm};
+  --spacing-md: #{$spacing-md};
+  --spacing-lg: #{$spacing-lg};
+  --spacing-xl: #{$spacing-xl};
+  --spacing-2xl: #{$spacing-2xl};
+	
+  // Размеры шрифтов
+	--font-size-xs: #{$font-size-xs};
+  --font-size-sm: #{$font-size-sm};
+  --font-size-base: #{$font-size-base};
+  --font-size-lg: #{$font-size-lg};
+  --font-size-xl: #{$font-size-xl};
+  --font-size-2xl: #{$font-size-2xl};
+
+  
+  // Веса шрифтов
+  --font-weight-light: 400;
+  --font-weight-normal: 500;
+  --font-weight-medium: 600;
+  --font-weight-semibold: 700;
+  --font-weight-bold: 800;
+  
+  // Переходы
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
+}

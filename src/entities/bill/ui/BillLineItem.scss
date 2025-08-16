@@ -1,0 +1,43 @@
+.bill-line-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: rem(20);
+	
+
+  &__label {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: rem(12);
+    line-height: 1.5;
+    color: rgba(1, 4, 0, 0.5);
+    white-space: pre-line;
+    flex: 1;
+	
+  }
+
+  &__amount {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: rem(12);
+    line-height: 1.5;
+    color: rgba(1, 4, 0, 0.5);
+		
+		
+
+    &--discount {
+      font-weight: 700;
+      color: rgba(1, 4, 0, 0.5);
+    }
+  }
+
+  &--total {
+    .bill-line-item__label,
+    .bill-line-item__amount {
+      font-weight: 500;
+      font-size: rem(20);
+      color: #010400;
+			
+    }
+  }
+}

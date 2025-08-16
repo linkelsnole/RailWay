@@ -1,0 +1,21 @@
+.booked-ticket {
+	&__success {
+		margin-bottom: rem(32);
+		img {
+			margin: auto;
+			margin-bottom: rem(24);
+		}
+		&-description {
+			font-size: rem(32);
+			font-weight: 500;
+			color: #31A91D;
+			text-align: center;
+		}
+	}
+}
+
+.booked-ticket__container {
+	display: flex;
+	flex-direction: column;
+	gap: rem(24);
+}

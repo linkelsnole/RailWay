@@ -1,0 +1,45 @@
+.checkout-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: rem(16);
+  padding: 0 rem(16);
+
+	&__suptitle {
+		font-family: 'Poppins', sans-serif;
+		font-weight: 500;
+		font-size: rem(12);
+		line-height: 1.5;
+		color: #01040080;
+	}
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: rem(16);
+    width: rem(400);
+		margin-bottom: rem(16);
+  }
+
+
+  &__policies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: rem(30);
+    justify-content: center;
+    width: 100%;
+  }
+
+  &__policy-link {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: rem(14);
+    line-height: 1.5;
+    color: rgba(1, 4, 0, 0.5);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

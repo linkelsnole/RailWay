@@ -1,0 +1,54 @@
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: rem(16) 0;
+	background-color: transparent;
+	width: 100%;
+	padding: rem(32) rem(64);
+	&__logo-link {
+		display: flex;
+		align-items: center;
+		gap: rem(10);
+		color: inherit;
+		text-decoration: none;
+		transition: transform 0.3s ease;
+		@include hover {
+			transform: scale(1.05);
+		}
+		img {
+			width: rem(74);
+			height: rem(39);
+		}
+
+	}
+			&__logo-text {
+			@include fluid-text(34, 24);
+			font-weight: 400;
+
+		}
+	&__nav {
+		&-list {
+			list-style: none;
+			display: flex;
+			gap: rem(96);
+		}
+		&-item {
+			list-style: none;
+			a {
+				text-decoration: none;
+				color: inherit;
+			}
+			}
+	}
+}
+
+.light {
+	color: var(--color-white);
+}
+
+.dark {
+	color: black;
+}
+
+

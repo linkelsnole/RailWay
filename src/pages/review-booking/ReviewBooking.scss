@@ -1,0 +1,12 @@
+.review-booking {
+	display: flex;
+	flex-direction: column;
+	gap: rem(32);
+	padding-bottom: rem(128);
+	padding-top: rem(32);
+
+	&_utils {
+		display: flex;
+		gap: rem(32);
+	}
+}

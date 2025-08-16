@@ -1,0 +1,79 @@
+.hover {
+  &-scale {
+    transition: transform var(--transition-fast);
+    
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+  
+  &-lift {
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+    
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+  }
+  
+  &-opacity {
+    transition: opacity var(--transition-fast);
+    
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  
+  &-brightness {
+    transition: filter var(--transition-fast);
+    
+    &:hover {
+      filter: brightness(1.1);
+    }
+  }
+}
+
+// Focus эффекты
+.focus {
+  &-ring {
+    &:focus {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 2px;
+    }
+  }
+  
+  &-ring-inset {
+    &:focus {
+      outline: 2px solid var(--color-primary);
+      outline-offset: -2px;
+    }
+  }
+}
+
+// Состояния загрузки
+.loading {
+  position: relative;
+  pointer-events: none;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid var(--color-gray-300);
+    border-top-color: var(--color-primary);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+}
+
+// Disabled состояния
+.disabled,
+[disabled] {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: not-allowed;
+}

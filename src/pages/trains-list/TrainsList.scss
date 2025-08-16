@@ -1,0 +1,57 @@
+@use '../../shared/styles/mixins' as *;
+
+.trains-list {
+	&__content {
+
+	}
+
+	&__title {
+		font-size: rem(48);
+		font-weight: 400;
+		margin-bottom: rem(32);
+		color: #5E4AE3;
+	}
+
+	&__footer-cards {
+		display: flex;
+		flex-direction: column;
+		gap: rem(30);
+		margin-bottom: rem(60);
+		margin-top: calc(rem(60) - rem(20));
+		p {
+			font-size: var(--font-size-sm);
+			font-weight: var(--font-weight-light);
+			color: #01040080;
+		}
+	}
+
+	&__footer-card {
+		width: 100%;
+		height: rem(150);
+		cursor: pointer;
+		transition: transform 0.3s ease;
+		&:first-child {
+			background-image: url('../../shared/images/holiday.svg');
+		}
+		&:nth-child(2) {
+			background-image: url('../../shared/images/holiday2.svg');
+		}
+		@include hover {
+			transform: translateX(rem(5));
+		}
+	}
+
+
+	&__available-trains {
+		&-title {
+			font-weight: var(--font-weight-normal);
+			font-size: var(--font-size-2xl);
+			color: black;
+			margin-bottom: rem(28);
+		}
+	}
+
+	
+}
+
+
