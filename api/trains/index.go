@@ -1,14 +1,38 @@
 package handler
 
 import (
-	"embed"
 	"encoding/json"
-	"net/http"
 	"log"
+	"net/http"
 )
 
-//go:embed trains-data.json
-var trainsJSON []byte
+var trainsJSONString = `
+[
+  {
+    "id": "1",
+    "number": 22426,
+    "name": "VANDE BHARAT",
+    "runsOn": "Everyday",
+    "duration": "8 hours",
+    "departure": {
+      "time": "23:25",
+      "date": "Aug 25",
+      "station": "New Delhi - NDLS"
+    },
+    "arrival": {
+      "time": "07:25",
+      "date": "Aug 26",
+      "station": "Lucknow - LJN"
+    },
+    "classes": [
+      { "type": "3A", "status": "Avl - 046", "quota": "Tatkal", "price": "800" },
+      { "type": "2A", "status": "Avl - 006", "quota": "Tatkal", "price": "1000" },
+      { "type": "1A", "status": "WL - 36",  "quota": "Tatkal", "price": "1200" }
+    ]
+  }
+]
+`
+
 
 type ClassInfo struct {
 	Type   string `json:"type"`
@@ -34,27 +58,10 @@ type Train struct {
 	Classes   []ClassInfo `json:"classes"`
 }
 
-// func LoadTrains() ([]Train, error) {
-// 	file, err := os.Open("trains-data.json")
-// 	if err != nil {
-// 		return nil, err
-// 	}
-// 	defer file.Close()
-// 	data, err := io.ReadAll(file)
-// 	if err != nil {
-// 		return nil, err
-// 	}
-// 	var trains []Train
-// 	err = json.Unmarshal(data, &trains)
-// 	if err != nil {
-// 		return nil, err
-// 	}
-// 	return trains, nil
-// }
 
 func LoadTrains() ([]Train, error) {
 	var trains []Train
-	err := json.Unmarshal(trainsJSON, &trains)
+	err := json.Unmarshal([]byte(trainsJSONString), &trains)
 	if err != nil {
 		return nil, err
 	}
@@ -73,8 +80,8 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 
 	trains, err := LoadTrains()
 	if err != nil {
-		log.Printf("ERROR: Failed to load trains: %v", err)
-		http.Error(w, err.Error(), http.StatusInternalServerError)
+		log.Printf("FATAL ERROR: Failed to unmarshal hardcoded JSON: %v", err)
+		http.Error(w, "An internal error occurred", http.StatusInternalServerError)
 		return
 	}
 	_ = json.NewEncoder(w).Encode(trains)
