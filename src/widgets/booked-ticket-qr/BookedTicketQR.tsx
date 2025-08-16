@@ -1,4 +1,4 @@
-import './BookedTicketQr.scss';
+import './BookedTicketQR.scss';
 import Button from '../../shared/ui/Button';
 
 

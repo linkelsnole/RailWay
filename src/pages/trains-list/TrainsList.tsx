@@ -1,5 +1,5 @@
 import Header from '../../widgets/header/Header';
-import './trainsList.scss';
+import './TrainsList.scss';
 import TicketSearchForm from '../../widgets/ticket-search-form/TicketSearchForm';
 import Footer from '../../widgets/footer/Footer';
 import TrainCard from '../../widgets/train-card/ui/TrainCard';

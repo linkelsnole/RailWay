@@ -1,5 +1,5 @@
 import Header from '../../widgets/header/Header';
-import './homePage.scss';
+import './HomePage.scss';
 import TicketSearchForm from '../../widgets/ticket-search-form/TicketSearchForm';
 
 const HomePage = () => {

@@ -17,5 +17,13 @@ export default defineConfig({
 				additionalData: `@use "${path.resolve(__dirname, 'src/shared/styles/tools.scss')}" as *;`,
 			}
 		}
+	},
+	server: {
+    proxy: {
+      '/api': {
+        target: 'http://localhost:8080',
+        changeOrigin: true,
+      }
+    }
 	}
 })

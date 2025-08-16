@@ -1,4 +1,4 @@
-import './footer.scss';
+import './Footer.scss';
 import logo from '../../shared/icons/logo.svg';
 
 const Footer = () => {
